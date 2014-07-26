@@ -9,6 +9,9 @@ The values extracted are those described in the UCI HAR Dataset documentation as
 The variable names written out below use "pseudo general expressions" to summarize. Items inside parentheses would
 be replaced by one of the elements "or'd" with the pipe (|) symbol. For an example see tBodyAcc below.
 All values are normalized and bounded within [-1,1].
+
+The information within the dataset does not mention units used, but accelerometers typically measure between +/-1g.
+Where a 'g' is 32feet/sec^2, or 9.81 meters/sec^2. (When calibrated to an output voltage per position).
 	
 		file : extract_both.txt
 				180 rows, 66 columns
@@ -16,7 +19,7 @@ All values are normalized and bounded within [-1,1].
 		Activity.ID : Factor with 6 levels - "Walking", "Walking.Upstairs", "Walking.Downstairs", 
 		"Sitting.Still", "Standing.Up", "Laying.Down"
 
-		All values are normalized and bounded within [-1,1]
+		All values are real numbers (numeric in R) normalized and bounded within [-1,1]
 
 		tBodyAcc.(mean|std)(X|Y|Z)_avg : (e.g. tBodyAcc.meanX_avg)
 		tGravityAcc.(mean|std)(X|Y|Z)_avg
